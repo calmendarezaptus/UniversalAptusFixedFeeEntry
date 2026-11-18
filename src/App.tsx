@@ -24,6 +24,7 @@ import {
   buildCargo, buildUpdate, CONCEPTO_MAX, DEFAULT_CONCEPTO, fetchCargos, formatAmount, generarIgualas, getCargo,
   igualaPreview, isPeriodo, lockReason, saveCargo, TIPO_COBRO_LABEL, type Cargo, type CargoPayload, type CargoUpdate, type TipoCobro,
 } from '@/lib/fixedfee'
+import { MenuButton } from '@/components/MenuButton'
 
 type Modal = { isOpen: boolean; type: StatusModalType; title: string; message: string }
 type Loadable<T> = { rows: T[]; loading: boolean; error: string }
@@ -244,6 +245,7 @@ function App() {
               <div className="flex items-center gap-3">
                 <h1 className="text-2xl font-bold text-slate-900 tracking-tight">{editing ? 'Editar cargo fijo' : 'Honorarios Fijos'}</h1>
                 <ThemeMenu theme={theme} setTheme={setTheme} />
+                <MenuButton />
               </div>
               <p className="text-slate-500 text-sm mt-0.5">Cuotas fijas, hitos e igualas mensuales por proyecto</p>
             </div>
